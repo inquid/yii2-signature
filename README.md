@@ -28,4 +28,19 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \inquid\signature\AutoloadExample::widget(); ?>```
+<?= \inquid\signature\SignatureWidget::widget(['clear' => true, 'undo' => true, 'change_color' => true, 'url' => 'google.com', 'save_server' => true]) ?>
+```
+
+Options available
+ 
+url string  
+width string  
+height string  
+save_png boolean  
+save_jpg boolean   
+save_svg boolean  
+save_server boolean  
+clear boolean 
+change_color boolean  
+undo boolean 
+description boolean  

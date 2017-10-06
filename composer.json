@@ -1,0 +1,21 @@
+{
+    "name": "inquid/yii2-signature",
+    "description": "Draw and save signatures in Yii2",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","widget","signature","legal"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "inquid",
+            "email": "contact@inquid.co"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "inquid\\signature\\": ""
+        }
+    }
+}

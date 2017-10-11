@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist inquid/yii2-signature "*"
+php composer.phar require --prefer-dist inquid/yii2-signature "dev-master"
 ```
 
 or add
 
 ```
-"inquid/yii2-signature": "*"
+"inquid/yii2-signature": "dev-master"
 ```
 
 to the require section of your `composer.json` file.

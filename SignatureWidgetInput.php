@@ -1,24 +1,27 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: macbook
+ * Date: 10/29/17
+ * Time: 11:26 PM
+ */
 
 namespace inquid\signature;
 
-/**
- * This is just an example.
- */
-class SignatureWidget extends \yii\base\Widget
+
+use yii\base\Model;
+use yii\widgets\InputWidget;
+
+class SignatureWidgetInput extends InputWidget
 {
-    public $url;
+    public $model;
+    public $attribute;
     public $width;
     public $height;
-    public $save_png;
-    public $save_jpg;
-    public $save_svg;
-    public $save_server;
-    public $clear;
-    public $change_color;
-    public $undo;
+    public $clear = true;
+    public $change_color = false;
+    public $undo = true;
     public $description;
-    private $save_buttons;
     private $action_buttons;
 
     public function init()
@@ -27,18 +30,6 @@ class SignatureWidget extends \yii\base\Widget
             $this->width = '500px';
         if ($this->height === null)
             $this->height = '300px';
-        if ($this->save_png == true) {
-            $this->save_buttons .= '<button type="button" class="button save" data-action="save-png">Save as PNG</button>';
-        }
-        if ($this->save_jpg == true) {
-            $this->save_buttons .= '<button type="button" class="button save" data-action="save-jpg">Save as JPG</button>';
-        }
-        if ($this->save_svg == true) {
-            $this->save_buttons .= '<button type="button" class="button save" data-action="save-svg">Save as SVG</button>';
-        }
-        if ($this->save_server == true) {
-            $this->save_buttons .= '<button type="button" class="button save" data-action="save-server" onclick="saveToServer(\'' . $this->url . '\')">Save in Database</button>';
-        }
         if ($this->clear == true) {
             $this->action_buttons .= '<button type="button" class="button clear" data-action="clear">Clear</button>';
         }
@@ -49,6 +40,11 @@ class SignatureWidget extends \yii\base\Widget
             $this->action_buttons .= '<button type="button" class="button" data-action="undo">Undo</button>';
         }
         SignatureAsset::register($this->view);
+    }
+
+    protected function hasModel()
+    {
+        return $this->model instanceof Model && $this->attribute !== null;
     }
 
     public function run()
@@ -71,12 +67,10 @@ class SignatureWidget extends \yii\base\Widget
                     <div>
                         ' . $this->action_buttons . '
                     </div>
-                    <div>
-                    ' . $this->save_buttons . '
-                    </div>
                 </div>
             </div>
         </div>';
+        $this->model->invoice_comment = 'mmmm<script>signaturePad.toDataURL();</script>';
         return $signature;
     }
 }

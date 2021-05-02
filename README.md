@@ -6,8 +6,7 @@
 
 # DEPRECATED
 **IMPORTANT** 
-All our Yii widgets will be discontinued as we are transitioning from a monolithic infraestructure into a microservice network and having backend complitely separated from frontend clients.
-We encourage to avoid using PHP among with CSS/HTML/Javascript and move towards Modern FE technologies like Angular/React/Vue and mobile like ionic, react native, flutter.
+All our Yii widgets will be discontinued as we are transitioning from a monolithic infrastructure into a microservice network and having the backend completely separated from frontend clients. We encourage you to avoid using PHP among with CSS/HTML/Javascript and move towards Modern FE technologies like Angular/React/Vue and mobile like ionic, react native, flutter.
 
 So you can use directly:
 https://github.com/szimek/signature_pad

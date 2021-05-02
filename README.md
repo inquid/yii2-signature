@@ -4,6 +4,14 @@
     </a>
 </p>
 
+# DEPRECATED
+**IMPORTANT** 
+All our Yii widgets will be discontinued as we are transitioning from a monolithic infraestructure into a microservice network and having backend complitely separated from frontend clients.
+We encourage to avoid using PHP among with CSS/HTML/Javascript and move towards Modern FE technologies like Angular/React/Vue and mobile like ionic, react native, flutter.
+
+So you can use directly:
+https://github.com/szimek/signature_pad
+
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=contact@inquid.co&item_name=Yii2+extensions+support&item_number=22+Campaign&amount=5%2e00&currency_code=USD)
 
 Yii2 Signature
